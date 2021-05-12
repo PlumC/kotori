@@ -1,10 +1,13 @@
 package com.itheima.test;
 
+import com.itheima.config.SpringCofiguration;
 import com.itheima.domain.Account;
 import com.itheima.service.IAccountService;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractRefreshableConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
@@ -18,7 +21,9 @@ public class AccountServiceTest {
     @Before
     public void init(){
         //获取容器
-        ac = new ClassPathXmlApplicationContext("bean.xml");
+//        ac = new ClassPathXmlApplicationContext("bean.xml");
+//        注解开发
+        ac = new AnnotationConfigApplicationContext(SpringCofiguration.class);
         //得到业务层对象
         as = ac.getBean("accountService",IAccountService.class);
     }
@@ -38,7 +43,7 @@ public class AccountServiceTest {
     @Test
     public void testSave() {
         Account account = new Account();
-        account.setName("djh");
+        account.setName("ljh");
         account.setMoney(1000000);
         as.saveAccount(account);
     }

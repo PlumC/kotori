@@ -37,9 +37,10 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!--给出要扫描的包-->
-        <property name="basePackage" value="com.nico.mapper"/>
+        <property name="basePackage" value="com.kotori.mapper"/>
     </bean>
-    <bean id="books" class="com.nico.pojo.Books">
+
+    <bean id="admin" class="com.kotori.entity.Admin">
 
     </bean>
 </beans>

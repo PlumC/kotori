@@ -9,10 +9,10 @@
 
 <!--spring整合service层-->
    <!--扫描service相关的bean-->
-    <context:component-scan base-package="com.nico.service"/>
-    <!--BookServiceImpl注入到IOC容器中-->
-    <bean id="bookServiceImpl" class="com.nico.service.BookServiceImpl">
-        <property name="bookMapper" ref="bookMapper"/>
+    <context:component-scan base-package="com.kotori.service"/>
+    <!--ServiceImpl注入到IOC容器中-->
+    <bean id="customerService" class="com.kotori.service.CustomerServiceImpl">
+        <property name="customerMapper" ref="customerMapper"/>
     </bean>
     <!--配置事务管理器-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

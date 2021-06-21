@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kotori.mapper.OrderDetailsMapper">
+    <insert id="insertOrderDetails">
+        insert into orderdetails( num, price, subtotal, commodity_id, order_id) VALUES
+            (#{num},#{price},#{subtotal},#{commodity.id},#{order.id})
+    </insert>
+</mapper>

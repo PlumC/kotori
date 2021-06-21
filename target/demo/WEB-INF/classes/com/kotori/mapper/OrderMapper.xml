@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kotori.mapper.OrderMapper">
+
+    <insert id="insertOrder">
+        <selectKey keyProperty="id" resultType="java.lang.Integer" keyColumn="id">
+            select last_insert_id();
+        </selectKey>
+         insert into  `order` (createTime,orderId,customer_id) values (#{createTime},#{orderId},#{customer.id})
+    </insert>
+
+    <resultMap id="orderAndDetail" type="Order">
+        <id property="id" column="o1Id"/>
+        <result property="createTime" column="createTime"/>
+        <result property="orderId" column="orderId"/>
+        <collection property="orderDetails" ofType="OrderDetails">
+            <id property="id" column="o2Id"/>
+            <result property="subtotal" column="subtotal"/>
+            <result property="price" column="o2Price"/>
+            <result property="num" column="num"/>
+            <association property="commodity" javaType="Commodity">
+                <id property="id" column="cId"/>
+            </association>
+            <association property="order" javaType="Order">
+                <id property="id" column="o1Id"/>
+            </association>
+        </collection>
+    </resultMap>
+
+    <select id="selectOrderByCustomerId" resultMap="orderAndDetail">
+        select o1.id as o1Id, createTime, orderId, customer_id,
+               o2.id o2Id, num, o2.price o2Price, subtotal, commodity_id, order_id ,
+               c.id cId,c.type cType,c.name cName,c.pic cPic,c.price cPrice from `order` o1 left
+            join orderdetails o2 on o1.id = o2.order_id left join commodity c on c.id = o2.commodity_id
+        where o1.customer_id = #{id} order by o1.id desc
+    </select>
+
+    <select id="selectOrderById" resultType="Order">
+        select * from 'order' where id =#{id}
+    </select>
+</mapper>

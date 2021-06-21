@@ -24,11 +24,7 @@ public class Mybatis_Test {
 
     Admin admin;
 
-    @Test
-    public void testDao(){
-        Admin admin = adminMapper.queryById(1);
-        System.out.println(admin);
-    }
+
 
     @Test
     public void testCommodity(){

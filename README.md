@@ -1,7 +1,7 @@
 # Plumc
 
 #### 介绍
-实现增删改查的ssm框架
+ssm shop
 
 #### 软件架构
 bootstrap

@@ -11,7 +11,7 @@ public class Commodity {
     private Integer id;
     private String name;
     private String pic;
-    private String price;
+    private Double price;
     /**
      * 库存
      * */
@@ -22,7 +22,7 @@ public class Commodity {
     public Commodity() {
     }
 
-    public Commodity(Integer id, String name, String pic, String price, Integer repertory, String type, List<OrderDetails> orderDetails) {
+    public Commodity(Integer id, String name, String pic, Double price, Integer repertory, String type, List<OrderDetails> orderDetails) {
         this.id = id;
         this.name = name;
         this.pic = pic;
@@ -56,11 +56,11 @@ public class Commodity {
         this.pic = pic;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -94,7 +94,7 @@ public class Commodity {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", pic='" + pic + '\'' +
-                ", price='" + price + '\'' +
+                ", price=" + price +
                 ", repertory=" + repertory +
                 ", type='" + type + '\'' +
                 ", orderDetails=" + orderDetails +

@@ -14,5 +14,8 @@
         <mapper resource="com/nico/mapper/UserMapper.xml"/>-->
         <mapper resource="com/kotori/mapper/CustomerMapper.xml"/>
         <mapper resource="com/kotori/mapper/AdminMapper.xml"/>
+        <mapper resource="com/kotori/mapper/CommodityMapper.xml"/>
+        <mapper resource="com/kotori/mapper/OrderMapper.xml"/>
+        <mapper resource="com/kotori/mapper/OrderDetailsMapper.xml"/>
     </mappers>
 </configuration>

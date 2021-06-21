@@ -1,30 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 18312
-  Date: 2021/6/14
-  Time: 22:03
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="header">
     <div class="header-top">
         <div class="container">
             <div class="lang_list">
-                <select tabindex="4" class="dropdown1">
-                    <option value="" class="label" value="">En</option>
-                    <option value="1">English</option>
-                    <option value="2">French</option>
-                    <option value="3">German</option>
-                </select>
             </div>
             <div class="top-right">
                 <ul>
-                    <li class="text"><a href="login.html">login</a>
+                    <li class="text"><a href="${pageContext.request.contextPath}/customer/toAccount?id=${customer.id}">个人中心</a></li>
                     <li><div class="cart box_1">
-                        <a href="checkout.html">
-                            <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)
+                        <a href="${pageContext.request.contextPath}/commodity/toCheckout">
+                            <span class="simpleCart_total"> </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)
                         </a>
-                        <p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
+                        <p class="text"><a href="javascript:;" class="simpleCart_empty"> *</a></p>
                         <div class="clearfix"> </div>
                     </div></li>
                 </ul>
@@ -39,122 +26,122 @@
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
+                            <span class="sr-only">切换导航</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <h1 class="navbar-brand"><a  href="index.html">swim wear</a></h1>
+                        <h1 class="navbar-brand"><a  href="${pageContext.request.contextPath}/customer/toHome">KOTORI的小店</a></h1>
                     </div>
                     <!--/.navbar-header-->
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="${pageContext.request.contextPath}/customer/toHome">主页</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">家居<b class="caret"></b></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
-                                                <li><a class="list" href="products.html">Women</a></li>
-                                                <li><a class="list1" href="products.html">PrettySecrets</a></li>
-                                                <li><a class="list1" href="products.html">N-Gal</a></li>
-                                                <li><a class="list1" href="products.html">Lobster</a></li>
-                                                <li><a class="list1" href="products.html">Citypret</a></li>
+                                                <li><a class="list" href="#">电子周边</a></li>
+                                                <li><a class="list1" href="#">服饰周边</a></li>
+                                                <li><a class="list1" href="#">箱包配件</a></li>
+                                                <li><a class="list1" href="#">文体</a></li>
+                                                <li><a class="list1" href="#">节日礼品</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
-                                                <li><a class="list" href="products.html">Kids</a></li>
-                                                <li><a class="list1" href="products.html">River Island</a></li>
-                                                <li><a class="list1" href="products.html">Penny</a></li>
-                                                <li><a class="list1" href="products.html">Nidhi Munim</a></li>
-                                                <li><a class="list1" href="products.html">Divaat</a></li>
+                                                <li><a class="list" href="#">耳机</a></li>
+                                                <li><a class="list1" href="#">键盘</a></li>
+                                                <li><a class="list1" href="#">配件</a></li>
+                                                <li><a class="list1" href="#">手办</a></li>
+                                                <li><a class="list1" href="#">模型</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
-                                                <li><a class="list" href="products.html">Men</a></li>
-                                                <li><a class="list1" href="products.html">Fiesta Clara</a></li>
-                                                <li><a class="list1" href="products.html">Quiksilver</a></li>
-                                                <li><a class="list1" href="products.html">Incult</a></li>
-                                                <li><a class="list1" href="products.html">Proline</a></li>
+                                                <li><a class="list" href="#">生活</a></li>
+                                                <li><a class="list1" href="#">抹茶</a></li>
+                                                <li><a class="list1" href="#">零食</a></li>
+                                                <li><a class="list1" href="#">水果</a></li>
+                                                <li><a class="list1" href="#">奶茶</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">women <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">挂件<b class="caret"></b></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
-                                                <li><a class="list" href="products.html">Women</a></li>
-                                                <li><a class="list1" href="products.html">PrettySecrets</a></li>
-                                                <li><a class="list1" href="products.html">N-Gal</a></li>
-                                                <li><a class="list1" href="products.html">Lobster</a></li>
-                                                <li><a class="list1" href="products.html">Citypret</a></li>
+                                                <li><a class="list" href="#">电子周边</a></li>
+                                                <li><a class="list1" href="#">服饰周边</a></li>
+                                                <li><a class="list1" href="#">箱包配件</a></li>
+                                                <li><a class="list1" href="#">文体</a></li>
+                                                <li><a class="list1" href="#">节日礼品</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
-                                                <li><a class="list"  href="products.html">Kids</a></li>
-                                                <li><a class="list1" href="products.html">River Island</a></li>
-                                                <li><a class="list1" href="products.html">Penny</a></li>
-                                                <li><a class="list1" href="products.html">Nidhi Munim</a></li>
-                                                <li><a class="list1" href="products.html">Divaat</a></li>
+                                                <li><a class="list" href="#">耳机</a></li>
+                                                <li><a class="list1" href="#">键盘</a></li>
+                                                <li><a class="list1" href="#">配件</a></li>
+                                                <li><a class="list1" href="#">手办</a></li>
+                                                <li><a class="list1" href="#">模型</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
-                                                <li><a  class="list" href="products.html">Men</a></li>
-                                                <li><a class="list1" href="products.html">Fiesta Clara</a></li>
-                                                <li><a class="list1" href="products.html">Quiksilver</a></li>
-                                                <li><a class="list1" href="products.html">Incult</a></li>
-                                                <li><a class="list1" href="products.html">Proline</a></li>
+                                                <li><a class="list" href="#">生活</a></li>
+                                                <li><a class="list1" href="#">抹茶</a></li>
+                                                <li><a class="list1" href="#">零食</a></li>
+                                                <li><a class="list1" href="#">水果</a></li>
+                                                <li><a class="list1" href="#">奶茶</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">kids <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">周边<b class="caret"></b></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
-                                                <li><a class="list" href="products.html">Women</a></li>
-                                                <li><a class="list1" href="products.html">PrettySecrets</a></li>
-                                                <li><a class="list1" href="products.html">N-Gal</a></li>
-                                                <li><a class="list1" href="products.html">Lobster</a></li>
-                                                <li><a class="list1" href="products.html">Citypret</a></li>
+                                                <li><a class="list" href="#">电子周边</a></li>
+                                                <li><a class="list1" href="#">服饰周边</a></li>
+                                                <li><a class="list1" href="#">箱包配件</a></li>
+                                                <li><a class="list1" href="#">文体</a></li>
+                                                <li><a class="list1" href="#">节日礼品</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
-                                                <li><a  class="list" href="products.html">Kids</a></li>
-                                                <li><a class="list1" href="products.html">River Island</a></li>
-                                                <li><a class="list1" href="products.html">Penny</a></li>
-                                                <li><a class="list1" href="products.html">Nidhi Munim</a></li>
-                                                <li><a class="list1" href="products.html">Divaat</a></li>
+                                                <li><a class="list" href="#">耳机</a></li>
+                                                <li><a class="list1" href="#">键盘</a></li>
+                                                <li><a class="list1" href="#">配件</a></li>
+                                                <li><a class="list1" href="#">手办</a></li>
+                                                <li><a class="list1" href="#">模型</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
-                                                <li><a class="list" href="products.html">Men</a></li>
-                                                <li><a class="list1" href="products.html">Fiesta Clara</a></li>
-                                                <li><a class="list1" href="products.html">Quiksilver</a></li>
-                                                <li><a class="list1" href="products.html">Incult</a></li>
-                                                <li><a class="list1" href="products.html">Proline</a></li>
+                                                <li><a class="list" href="#">生活</a></li>
+                                                <li><a class="list1" href="#">抹茶</a></li>
+                                                <li><a class="list1" href="#">零食</a></li>
+                                                <li><a class="list1" href="#">水果</a></li>
+                                                <li><a class="list1" href="#">奶茶</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="products.html">Top</a></li>
-                            <li><a href="products.html">Bikini</a></li>
+                            <li><a href="${pageContext.request.contextPath}/commodity/allType">商品</a></li>
+                            <li><a href="#">演出</a></li>
                         </ul>
                     </div>
                     <!--/.navbar-collapse-->
@@ -164,7 +151,7 @@
             <div class="search-box">
                 <div id="sb-search" class="sb-search">
                     <form>
-                        <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+                        <input class="sb-search-input" placeholder="" type="search" name="search" id="search">
                         <input class="sb-search-submit" type="submit" value="">
                         <span class="sb-icon-search"> </span>
                     </form>

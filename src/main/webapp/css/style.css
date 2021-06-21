@@ -6,6 +6,37 @@
     font-family: 'OpenSans-Regular';
     src:url(../fonts/OpenSans-Regular.ttf) format('truetype');
 }
+
+#loginTip{
+  color: red;
+    display: none;
+}
+#addSuccess{
+    color: pink;
+    display: none;
+}
+#resUserTip{
+    color: red;
+    display: none;
+}
+#userTip{
+    color: red;
+    display: none;
+}
+
+
+#checkPswTip{
+    color: red;
+    display: none;
+}
+#updateTip{
+    color: red;
+    display: none;
+}
+#nameTip{
+    color: red;
+    display: none;
+}
 body a{
     transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -39,7 +70,9 @@ body{
 	font-family: 'OpenSans-Regular'
 }
 .header-top {
-    background-color: #000;
+    background-color:black;
+
+
  }
 .lang_list{
     float: left;
@@ -147,6 +180,7 @@ select.dropdown1:focus {
 }
 .header-bottom {
     padding: 2em 0;
+    box-shadow:0px 15px 10px -15px #000;
 }
 .search-box {
     float: right;
@@ -274,7 +308,7 @@ h1.navbar-brand a {
 	cursor: pointer;
 }
 .sb-search-submit {
-	background:#000 url('../images/search.png') no-repeat 10px 7px;
+	background:pink url('../images/search.png') no-repeat 10px 7px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
     filter: alpha(opacity=0); /* IE 5-7 */
     color: transparent;
@@ -326,7 +360,7 @@ h1.navbar-brand a {
 a.button {
     font-size: 1em;
     text-decoration: none;
-    border: 2px solid #000;
+    border: 2px solid pink;
     padding: 0.5em 4em;
     color: #000;
     text-transform: uppercase;
@@ -427,6 +461,7 @@ span.glyphicon.glyphicon-eye-open {
 	direction: rtl;
 	text-align: center;
 	float: left;
+    color: pink;
 }
 .rating > span {
 	display: inline-block;
@@ -825,6 +860,14 @@ p span.overline{
 	font-size:0.8125em;
 	padding: 0.5em;
 }
+.login-right input[type="password"] {
+    border: 1px solid #555;
+    outline-color:#08538C;
+    width: 96%;
+    font-size:0.8125em;
+    padding: 0.5em;
+}
+
 .login-right input[type="submit"] {
 	border: 2px solid #000;
 	color: #000;
@@ -868,6 +911,13 @@ p span.overline{
 	width: 96%;
 	font-size: 1em;
 	padding: 0.5em;
+}
+.register-top-grid input[type="password"], .register-bottom-grid input[type="password"] {
+    border: 1px solid #555;
+    outline-color:#FD9F3E;
+    width: 96%;
+    font-size: 1em;
+    padding: 0.5em;
 }
 .checkbox {
 	margin-bottom: 4px;
@@ -940,6 +990,24 @@ p span.overline{
 .register-but{
 	margin-top:1em;
 }
+#buyBtn{
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1.2em;
+    padding: 0.6em 2em;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    background-color: #fff;
+}
+#buyBtn:hover{
+    background:#000;
+    color: #fff;
+}
 .register-but form input[type="submit"] {
 	border: 2px solid #000;
 	color: #000;
@@ -953,6 +1021,20 @@ p span.overline{
 	text-transform: uppercase;
 	outline: none;
 	background-color: #fff;
+}
+.register-but input[type="submit"]{
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1.2em;
+    padding: 0.6em 2em;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    background-color: #fff;
 }
 .register-but input[type="submit"]:hover {
 	background:#000;
@@ -1433,6 +1515,47 @@ i.sele{
 	background:#000;
 	border:none;
 	outline:none;
+}
+#cartBuy{
+    float: right;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    padding:0.5em 2em;
+    display:inline-block;
+    border-radius:5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 1.5em 16px 0px 0px;
+    background:#000;
+    border:none;
+    outline:none;
+}
+#cartBuy:hover{
+    background:#eee;
+    color: #000;
+}
+
+#clearAll{
+    float: right;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    padding:0.5em 2em;
+    display:inline-block;
+    border-radius:5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 1.5em 16px 0px 0px;
+    background:#000;
+    border:none;
+    outline:none;
+}
+#clearAll:hover{
+    background:#eee;
+    color: #000;
 }
 .prt_name{
 	padding: 0.8em 1.2em;
@@ -2290,10 +2413,10 @@ span.item_price {
 }
 .products-grid {
     float: left;
-    width: 50%;
+    width: 100%;
 }
 .single-grid1 {
-    width: 100%;
+    width: 50%;
 }
 .single-grid {
     width: 100%;
@@ -2461,6 +2584,9 @@ display:none;
 .lang_list {
     float: left;
     width: 37%;
+}
+.text{
+    color: black;
 }
 .top-right {
     float: right;

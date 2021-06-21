@@ -10,39 +10,39 @@
   <div class="container">
     <div class="footer-grids">
       <div class="col-md-2 footer-grid">
-        <h4>company</h4>
+        <h4>公司</h4>
         <ul>
-          <li><a href="products.html">products</a></li>
-          <li><a href="#">Work Here</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Happenings</a></li>
-          <li><a href="#">Dealer Locator</a></li>
+          <li><a href="#">产品</a></li>
+          <li><a href="#">联系我们</a></li>
+          <li><a href="#">团队</a></li>
+          <li><a href="#">概况</a></li>
+          <li><a href="#">经销商</a></li>
         </ul>
       </div>
       <div class="col-md-2 footer-grid">
-        <h4>service</h4>
+        <h4>服务</h4>
         <ul>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Warranty</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">支持</a></li>
+          <li><a href="#">问题</a></li>
+          <li><a href="#">售后</a></li>
+          <li><a href="#">联系我们</a></li>
         </ul>
       </div>
       <div class="col-md-2 footer-grid">
-        <h4>order & returns</h4>
+        <h4>订购和退货</h4>
         <ul>
-          <li><a href="#">Order Status</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="#">Return Policy</a></li>
-          <li><a href="#">Digital Gift Card</a></li>
+          <li><a href="#">订单状态</a></li>
+          <li><a href="#">运输政策</a></li>
+          <li><a href="#">退货政策</a></li>
+          <li><a href="#">电子礼品卡</a></li>
         </ul>
       </div>
       <div class="col-md-2 footer-grid">
-        <h4>legal</h4>
+        <h4>法律条文</h4>
         <ul>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms and Conditions</a></li>
-          <li><a href="#">Social Responsibility</a></li>
+          <li><a href="#">隐私</a></li>
+          <li><a href="#">条款和条件</a></li>
+          <li><a href="#">社会责任</a></li>
         </ul>
       </div>
       <div class="col-md-4 footer-grid1">
@@ -53,7 +53,7 @@
           <a href="#"><i class="icon3"></i></a>
           <a href="#"><i class="icon4"></i></a>
         </div>
-        <p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+        <p>Copyright &copy; 2015.Company name All rights reserved</p>
       </div>
       <div class="clearfix"></div>
     </div>

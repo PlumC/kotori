@@ -6,7 +6,7 @@ package com.kotori.entity;
  */
 public class OrderDetails {
     private Integer id;
-    private String num;
+    private Integer num;
     /**
      * 小计
      * */
@@ -20,10 +20,11 @@ public class OrderDetails {
     private Order order;
     private Commodity commodity;
 
+
     public OrderDetails() {
     }
 
-    public OrderDetails(Integer id, String num, Double subtotal, Double price, Order order, Commodity commodity) {
+    public OrderDetails(Integer id, Integer num, Double subtotal, Double price, Order order, Commodity commodity) {
         this.id = id;
         this.num = num;
         this.subtotal = subtotal;
@@ -40,11 +41,11 @@ public class OrderDetails {
         this.id = id;
     }
 
-    public String getNum() {
+    public Integer getNum() {
         return num;
     }
 
-    public void setNum(String num) {
+    public void setNum(Integer num) {
         this.num = num;
     }
 
@@ -84,7 +85,7 @@ public class OrderDetails {
     public String toString() {
         return "OrderDetails{" +
                 "id=" + id +
-                ", num='" + num + '\'' +
+                ", num=" + num +
                 ", subtotal=" + subtotal +
                 ", price=" + price +
                 ", order=" + order +

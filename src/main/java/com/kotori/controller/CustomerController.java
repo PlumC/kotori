@@ -9,10 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 /**
  * @author kotori
  */
@@ -43,42 +39,77 @@ public class CustomerController {
 
     @ResponseBody
     @RequestMapping("/doLogin")
-    public String doLogin(String username, String password){
+    public String doLogin(String username, String password,Model model){
         Customer customer = customerService.doLogin(username,password);
-
         if (customer == null) {
             /*登录失败*/
             return "0";
         }
-
-      /*  if ("1".equals(remeberMe)){
-            *//*记住我*//*
-            Cookie cookie = new Cookie("customerCookie",
-                    username+":"+password);
-            *//*最大保存时间*//*
-            cookie.setMaxAge(7*24*60*60);
-            response.addCookie(cookie);
-        }else {
-            Cookie[] cookies = request.getCookies();
-            Cookie customerCookie = getCookie(cookies,"customer");
-            if (customerCookie == null) {
-                customerCookie.setMaxAge(0);
-                response.addCookie(customerCookie);
-            }
-        }
-        *//*利用session保存用户信息*//*
-        model.addAttribute("customer",customer);*/
+        model.addAttribute("customer",customer);
         return "1";
+    }
+
+    @ResponseBody
+    @RequestMapping("/toCheckUser")
+    public String toCheckUser(String username) {
+        Customer customer = customerService.doCheckUser(username);
+        if (customer == null) {
+            return "0";
+        }else {
+            return "1";
+        }
 
     }
-   /* private Cookie getCookie(Cookie[] cookies,String name){
-        Cookie cookie = null;
-        for (Cookie c : cookies) {
-            if (c.getName().equals(name)){
-                cookie = c;
-                break;
+    @RequestMapping("toReCheck")
+    @ResponseBody
+    public String toCheckUser(String username, int id){
+        int i = customerService.reCheckCustomer(username);
+        if (i== 0 ){
+            return "0";
+        }else if(i==1){
+            int c = customerService.findIdByUsername(username);
+            if (c == id) {
+              return "0";
             }
         }
-        return cookie;
-    }*/
+        return "1";
+    }
+
+    /**注册页面*/
+    @RequestMapping("/Register")
+    public String toAccount(){
+        return "account";
+    }
+
+    @ResponseBody
+    @RequestMapping("/toRegister")
+    public String register(String username,String password,String phone){
+        int i = customerService.register(username,password,phone);
+        if (i == 1) {
+            return "1";
+        }
+        /**注册失败*/
+        return "0";
+    }
+
+    /**个人主页*/
+    @RequestMapping("/toAccount")
+    public String uAccount(int id,Model model){
+        Customer cus = customerService.selectCustomerById(id);
+        model.addAttribute("cus",cus);
+        return "uAccount";
+    }
+
+    @RequestMapping("toUpdate")
+    @ResponseBody
+    public String updateCustomer(int id,String name,String username,String address,String phone){
+        Customer customer = customerService.selectCustomerById(id);
+        customer.setName(name);
+        customer.setAddress(address);
+        customer.setUsername(username);
+        customer.setPhone(phone);
+        customerService.updateCustomer(customer);
+
+        return "1";
+     }
 }

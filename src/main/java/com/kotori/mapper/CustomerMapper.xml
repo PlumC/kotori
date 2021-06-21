@@ -7,4 +7,40 @@
     <select id="selectCustomerByUsernameAndPassword" resultType="Customer">
         select * from customer where username = #{username} and password = #{password}
     </select>
+    <select id="checkUser" resultType="Customer">
+        select * from customer where username = #{username}
+    </select>
+
+    <select id="reCheckCustomer" resultType="java.lang.Integer">
+        select count(id) from customer where username = #{username};
+    </select>
+    <select id="findIdByUsername" resultType="java.lang.Integer">
+        select id from customer where username = #{username}
+    </select>
+    <insert id="insertCustomer" >
+         insert into customer(username,password,phone) values (#{username},#{password},#{phone})
+    </insert>
+    <select id="selectCustomerById" resultType="Customer">
+        select * from customer where id= #{id}
+    </select>
+
+    <update id="updateCustomer" >
+        update customer set id = #{id}
+        <if test="address != null and name != ''">
+            ,address = #{address}
+        </if>
+        <if test="name != null and name != ''">
+            ,name = #{name}
+        </if>
+        <if test="phone != null and phone != ''">
+            ,phone = #{phone}
+        </if>
+        <if test="username != null and username != ''">
+            ,username = #{username}
+        </if>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
 </mapper>

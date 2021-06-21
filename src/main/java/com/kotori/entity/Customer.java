@@ -105,7 +105,6 @@ public class Customer {
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
                 ", postCode=" + postCode +
-                ", orders=" + orders +
                 '}';
     }
 }

@@ -97,7 +97,6 @@ public class Commodity {
                 ", price=" + price +
                 ", repertory=" + repertory +
                 ", type='" + type + '\'' +
-                ", orderDetails=" + orderDetails +
                 '}';
     }
 }

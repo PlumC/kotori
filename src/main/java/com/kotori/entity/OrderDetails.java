@@ -88,8 +88,6 @@ public class OrderDetails {
                 ", num=" + num +
                 ", subtotal=" + subtotal +
                 ", price=" + price +
-                ", order=" + order +
-                ", commodity=" + commodity +
                 '}';
     }
 }

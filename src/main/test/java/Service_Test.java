@@ -95,9 +95,7 @@ public class Service_Test {
 
 
         order.setOrderDetails(list);
-
-
-
+        
         System.out.println("订单------"+order);
         System.out.println("订单详情-----"+orderDetails);
     }

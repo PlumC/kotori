@@ -80,7 +80,7 @@
                     </div>
                     <div class="clearfix"> </div>
                         <div class="register-but">
-                                <input type="submit" value="修改" >
+                                <input type="submit" value="修改" ><input type="button" value="退出登录" >
                                 <div class="clearfix"> </div> <br>
                                <span id="updateTip">*修改成功</span>
                                <span id="nameTip">*这个用户名已经有人用啦，换一个吧</span>

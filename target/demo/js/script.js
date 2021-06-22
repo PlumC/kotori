@@ -223,3 +223,7 @@ function orderBuy(id,num) {
         }
     })
 }
+
+function logout(){
+    window.location.href =$("#PageContext").val()+"/customer/logout";
+}

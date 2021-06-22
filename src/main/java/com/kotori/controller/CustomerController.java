@@ -8,6 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * @author kotori
@@ -112,4 +115,11 @@ public class CustomerController {
 
         return "1";
      }
+
+     /**退出方法*/
+    @RequestMapping("/logout")
+    public String logout(HttpSession session, SessionStatus sessionStatus){
+        sessionStatus.setComplete();
+        return "redirect:/index.jsp";
+    }
 }

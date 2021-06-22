@@ -22,19 +22,29 @@ public class Mybatis_Test {
     @Autowired
     CommodityMapper commodityMapper;
 
-    Admin admin;
-
-
 
     @Test
     public void testCommodity(){
         Commodity commodity;
-        commodity = commodityMapper.selectCommodityById(17);
+        commodity = commodityMapper.selectCommodityById(49);
         System.out.println(commodity);
 
   /*      List<Commodity> com ;
         com = commodityMapper.selectByName("卡西欧");
         System.out.println(com.toString());*/
+    }
+
+    @Test
+    public void testInsert(){
+        Commodity commodity = new Commodity();
+        commodity.setName("宇宙超级无敌渣男张智扬");
+        commodity.setPic("zzzzzzzyyzyzyyz.jpg");
+        commodity.setPrice((double)3333);
+        commodity.setRepertory(5);
+        commodity.setType("人渣败类");
+
+        System.out.println(commodity);
+        commodityMapper.insertCommodities(commodity);
     }
 
 }

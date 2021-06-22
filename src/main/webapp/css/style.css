@@ -990,6 +990,44 @@ p span.overline{
 .register-but{
 	margin-top:1em;
 }
+#successTip{
+    margin-top: 10px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1.2em;
+    padding: 0.6em 2em;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    background-color: #fff;
+}
+#successTip:hover{
+    background:#000;
+    color: #fff;
+}
+#outbtn{
+    margin-left: 20px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1.2em;
+    padding: 0.6em 2em;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    background-color: #fff;
+}
+#outbtn:hover{
+    background:#000;
+    color: #fff;
+}
 #buyBtn{
     border: 2px solid #000;
     color: #000;

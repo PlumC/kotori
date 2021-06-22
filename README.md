@@ -1,7 +1,7 @@
 # Plumc
 
 #### 介绍
-基于ssm 框架的小购物网站demo
+基于ssm 框架的购物网站demo
 
 #### 软件架构
 bootstrap

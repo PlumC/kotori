@@ -15,6 +15,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
     <!-- cart -->
     <script src="${pageContext.request.contextPath}/js/simpleCart.min.js"> </script>
+    <input id="PageContext" type="hidden" value="${pageContext.request.contextPath}" />
+    <script src="${pageContext.request.contextPath}/js/script.js"></script>
     <!-- cart -->
 </head>
 <body>

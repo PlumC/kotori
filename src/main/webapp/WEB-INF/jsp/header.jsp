@@ -6,7 +6,7 @@
             </div>
             <div class="top-right">
                 <ul>
-                    <li class="text"><a href="${pageContext.request.contextPath}/customer/toAccount?id=${customer.id}">个人中心</a></li>
+                    <li class="text"><a href="${pageContext.request.contextPath}/customer/toAccount?id=${customer.id}" >${sessionScope.customer.username}</a></li>
                     <li><div class="cart box_1">
                         <a href="${pageContext.request.contextPath}/commodity/toCheckout">
                             <span class="simpleCart_total"> </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)

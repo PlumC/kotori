@@ -13,8 +13,8 @@
 
 ###### 技术说明
 
-持久层技术为 mybatis，数据库选择mysql 8.0.22 ，数据库连接池为c3p0；
-
+持久层技术为 mybatis，数据库选择mysql 8.0.22 ，数据库连接池为c3p0
+项目构建 ： maven
 业务层以及表现层使用spring接管，应用spring  springmvc技术
 模板引擎：jsp;
 前端ui框架: bootsrtap 

@@ -1,14 +1,14 @@
 # Plumc
 
 #### 介绍
-ssm shop
+基于ssm 框架的购物网站demo
 
 #### 软件架构
 bootstrap
 springmvc
 spring
 mybatis
-mysql
+mysql 8.0.22
 #### 安装教程
 
 基于IDEA部署

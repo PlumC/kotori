@@ -5,6 +5,7 @@
   Time: 14:40
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -59,7 +60,7 @@
                         </td>
                     </tr>
                 </c:if>
-                <c:forEach items="${cart}" varStatus="status" var="c">
+                <c:forEach items="${cart}" varStatus="status" var="c" >
 
                 <div class="cart-header">
                     <a href="javascript:void(0);" onclick="deleteCart(${c.commodity.id})"><div class="close1"> </div> </a>
@@ -76,6 +77,7 @@
                             </ul>
                             <div class="delivery">
                                 <p></p><br>
+
                                 <a href="javascript:void(0);" id="cartBuy" onclick="toBuy(${c.commodity.id},${c.num})" >结算</a>
                                 <div class="clearfix"></div>
                             </div>
@@ -84,6 +86,15 @@
                     </div>
                 </div>
                 </c:forEach>
+            <span>
+                ${cart.size()}
+            </span>
+            <span>
+                ${requestScope.count}
+            </span>
+            <span>
+                ${requestScope.sum}
+            </span>
             <a href="#" id="clearAll">结算所有</a>
         </div>
     </div>

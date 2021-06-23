@@ -150,9 +150,9 @@
             </div>
             <div class="search-box">
                 <div id="sb-search" class="sb-search">
-                    <form>
+                    <form id="searchForm" onsubmit="searchByName($('searchBtn'))">
                         <input class="sb-search-input" placeholder="" type="search" name="search" id="search">
-                        <input class="sb-search-submit" type="submit" value="">
+                        <input class="sb-search-submit" type="submit" id="searchBtn">
                         <span class="sb-icon-search"> </span>
                     </form>
                 </div>

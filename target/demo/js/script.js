@@ -227,3 +227,9 @@ function orderBuy(id,num) {
 function logout(){
     window.location.href =$("#PageContext").val()+"/customer/logout";
 }
+
+function searchByName(name){
+    if(name != null){
+        window.location.href =$("#PageContext").val()+"/customer/toSearch?name="+name;
+    }
+}

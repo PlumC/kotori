@@ -17,7 +17,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/commodity")
-@SessionAttributes(value = {"cart"})
+@SessionAttributes(value = {"cart","count","sum"})
 public class CommodityController {
 
     @Autowired
@@ -58,6 +58,10 @@ public class CommodityController {
         return "products";
     }
 
+/*    @RequestMapping("/toSearch")
+    public String toSearch(){
+
+    }*/
     /**商品详情页*/
 
     @RequestMapping("/toSingle")
@@ -103,7 +107,8 @@ public class CommodityController {
             list.add(cart);
         }
         model.addAttribute("cart",list);
-
+        model.addAttribute("count",  list.stream().map(e -> e.getNum()).reduce(Integer::sum).get());
+        model.addAttribute("sum",list.stream().map(e -> e.getSubtotal()).reduce(Double::sum).get());
         return "1";
     }
 

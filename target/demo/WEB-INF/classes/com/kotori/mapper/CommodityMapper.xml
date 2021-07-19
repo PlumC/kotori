@@ -42,4 +42,7 @@
         select type,concat(count(*)) num from commodity group by type;
     </select>
 
+    <delete id="deleteById">
+        delete from commodity where id = #{id}
+    </delete>
 </mapper>

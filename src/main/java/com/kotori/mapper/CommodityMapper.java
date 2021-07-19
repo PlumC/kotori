@@ -31,5 +31,7 @@ public interface CommodityMapper {
     List<Commodity> selectCommodityByNameAndType(@Param("name") String name,@Param("type") String type);
 
     List<Map<String,String>> selectNumByType();
+
+    void deleteById(int id);
 }
 

@@ -36,15 +36,7 @@ public class Mybatis_Test {
 
     @Test
     public void testInsert(){
-        Commodity commodity = new Commodity();
-        commodity.setName("宇宙超级无敌渣男张111智扬");
-        commodity.setPic("zzzzzzzyyzyzyyz.jpg");
-        commodity.setPrice((double)3333);
-        commodity.setRepertory(5);
-        commodity.setType("人渣败类");
 
-        System.out.println(commodity);
-        commodityMapper.insertCommodities(commodity);
     }
 
 }
